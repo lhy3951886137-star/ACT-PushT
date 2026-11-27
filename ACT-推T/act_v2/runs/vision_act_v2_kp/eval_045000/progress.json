@@ -1,0 +1,15 @@
+{
+  "pid": 16968,
+  "completed": 50,
+  "target": 50,
+  "last": {
+    "seed": 10100049,
+    "success": true,
+    "max_coverage": 0.952314555644989,
+    "final_coverage": 0.952314555644989,
+    "max_iou": 0.9089698791503906,
+    "distance_at_max_mm": 2.2403153125196695,
+    "angle_at_max_deg": 0.7562671303749084,
+    "steps": 970
+  }
+}

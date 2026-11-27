@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "name": "state_act_v2_150",
+  "steps": 40000,
+  "best_step": 20000,
+  "best_validation_success": 0.98,
+  "best_validation_coverage": 0.9518760466575622,
+  "best_validation_l1": 0.1100204199552536,
+  "seconds": 1806.875
+}

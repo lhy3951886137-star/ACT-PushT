@@ -1,0 +1,9 @@
+# Tested with CPython 3.12.10; install CUDA PyTorch separately (see README).
+Pillow==13.0.0
+robosuite==1.5.2
+mujoco==3.3.7
+numpy==1.26.4
+scipy==1.17.1
+h5py==3.16.0
+shapely==2.2.0
+zstandard==0.25.0

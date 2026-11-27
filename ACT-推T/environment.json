@@ -1,0 +1,18 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "packages": {
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "Pillow": "13.0.0",
+    "robosuite": "1.5.2",
+    "mujoco": "3.3.7",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "h5py": "3.16.0",
+    "shapely": "2.2.0"
+  },
+  "original_gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "cuda": "12.8",
+  "distribution_change": "act_v2/data.py: relocate legacy absolute source paths; original checkpoints and datasets remain byte-identical"
+}

@@ -1,0 +1,11 @@
+{
+  "weight_kind": "ema",
+  "n_action_steps": 12,
+  "action_schedule": [
+    12,
+    16,
+    18,
+    14
+  ],
+  "mc_dropout_on_freeze": true
+}

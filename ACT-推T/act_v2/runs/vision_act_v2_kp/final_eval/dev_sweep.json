@@ -1,0 +1,37 @@
+{
+  "checkpoint": "act_v2\\runs\\vision_act_v2_kp\\best.pt",
+  "sha256": "6e4486a2d0f9669d59892547b2f08b13242b16f804c34a67117fd42086b4bd52",
+  "best_n_action_steps": 8,
+  "results": [
+    {
+      "n_action_steps": 8,
+      "success_rate": 0.84,
+      "successes": 42,
+      "n": 50,
+      "success_ci95": [
+        0.7148551903823401,
+        0.9166267863791231
+      ],
+      "mean_max_coverage": 0.9457122814655304,
+      "mean_max_iou": 0.8975953865051269,
+      "mean_steps": 774.86,
+      "failed_mean_distance_mm": 3.8816870328446385,
+      "failed_mean_angle_deg": 2.243705078959465
+    },
+    {
+      "n_action_steps": 10,
+      "success_rate": 0.82,
+      "successes": 41,
+      "n": 50,
+      "success_ci95": [
+        0.6920368054529739,
+        0.902299172675462
+      ],
+      "mean_max_coverage": 0.9413462793827057,
+      "mean_max_iou": 0.8901713824272156,
+      "mean_steps": 831.84,
+      "failed_mean_distance_mm": 5.3040264174342155,
+      "failed_mean_angle_deg": 2.0983598033587136
+    }
+  ]
+}

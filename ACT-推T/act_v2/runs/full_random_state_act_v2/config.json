@@ -1,0 +1,31 @@
+{
+  "name": "full_random_state_act_v2",
+  "algorithm": "act_v2_full_random_state",
+  "environment": "full_random_v1",
+  "feature_mode": "full21",
+  "n_obs_steps": 3,
+  "chunk_size": 24,
+  "n_action_steps": 12,
+  "d_model": 384,
+  "nhead": 8,
+  "num_encoder_layers": 4,
+  "num_decoder_layers": 4,
+  "dim_feedforward": 1536,
+  "dropout": 0.1,
+  "use_vae": false,
+  "time_decay": 0.025,
+  "state_noise_std": 0.004,
+  "batch_size": 128,
+  "steps": 80000,
+  "lr": 0.0002,
+  "min_lr": 1e-06,
+  "warmup": 1500,
+  "weight_decay": 0.0003,
+  "ema_decay": 0.995,
+  "eval_every": 20000,
+  "eval_scenes": 50,
+  "seed": 42,
+  "extra_dirs": [
+    "act_v2/full_random_dagger"
+  ]
+}

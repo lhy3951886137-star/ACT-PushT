@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "name": "full_random_vision_act_v2",
+  "steps": 80000,
+  "best_step": 80000,
+  "best_validation_success": 0.88,
+  "best_validation_coverage": 0.8924453841149806,
+  "best_validation_l1": 0.20562822744250298,
+  "seconds": 16989.07800000001
+}

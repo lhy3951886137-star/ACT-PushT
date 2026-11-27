@@ -1,0 +1,10 @@
+{
+  "seed": 10100027,
+  "success": true,
+  "max_coverage": 0.9512418508529663,
+  "final_coverage": 0.9512418508529663,
+  "max_iou": 0.9070173501968384,
+  "distance_at_max_mm": 2.300071995705366,
+  "angle_at_max_deg": 0.9402785897254944,
+  "steps": 1079
+}

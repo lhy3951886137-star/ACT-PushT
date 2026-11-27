@@ -1,0 +1,176 @@
+{
+  "passed_80": true,
+  "passed_90": true,
+  "checkpoint": "act_v2\\runs\\full_random_vision_act_v3\\best.pt",
+  "sha256": "14baebb6f30200e029c86f887a40e004055017a7aedf4bba4ffb5985fa6a0a3c",
+  "inference": {
+    "tag": "ap_14_18_16_20_fw",
+    "action_schedule": [
+      14,
+      18,
+      16,
+      20
+    ],
+    "mc_dropout_on_freeze": true
+  },
+  "policy_inputs": [
+    "robot_xy[2]",
+    "birdview_128x128",
+    "robot0_eye_in_hand_128x128"
+  ],
+  "privileged_inputs": [],
+  "blind_100_sr": 0.92,
+  "blind_100_successes": 92,
+  "blind_100_n": 100,
+  "blind_100_ci95": [
+    0.8500173312059693,
+    0.9589070305141891
+  ],
+  "total_150_sr": 0.92,
+  "total_150_successes": 138,
+  "total_150_n": 150,
+  "total_150_ci95": [
+    0.8653774250568131,
+    0.9536468180607831
+  ],
+  "dev50": {
+    "success_rate": 0.92,
+    "successes": 46,
+    "n": 50,
+    "success_ci95": [
+      0.8116149745493629,
+      0.9684509967442093
+    ],
+    "mean_max_coverage": 0.909565312564373,
+    "mean_max_iou": 0.8621864284202456,
+    "mean_steps": 1288.56,
+    "mean_success_steps": 1191.9130434782608,
+    "angle_buckets": {
+      "0-45deg": {
+        "n": 8,
+        "successes": 8,
+        "sr": 1.0
+      },
+      "45-90deg": {
+        "n": 13,
+        "successes": 12,
+        "sr": 0.9230769230769231
+      },
+      "90-135deg": {
+        "n": 15,
+        "successes": 14,
+        "sr": 0.9333333333333333
+      },
+      "135-180deg": {
+        "n": 14,
+        "successes": 12,
+        "sr": 0.8571428571428571
+      }
+    }
+  },
+  "conf1_50": {
+    "success_rate": 0.92,
+    "successes": 46,
+    "n": 50,
+    "success_ci95": [
+      0.8116149745493629,
+      0.9684509967442093
+    ],
+    "mean_max_coverage": 0.9429574334621429,
+    "mean_max_iou": 0.8963257831335067,
+    "mean_steps": 1272.36,
+    "mean_success_steps": 1174.304347826087,
+    "angle_buckets": {
+      "0-45deg": {
+        "n": 12,
+        "successes": 11,
+        "sr": 0.9166666666666666
+      },
+      "45-90deg": {
+        "n": 14,
+        "successes": 14,
+        "sr": 1.0
+      },
+      "90-135deg": {
+        "n": 14,
+        "successes": 12,
+        "sr": 0.8571428571428571
+      },
+      "135-180deg": {
+        "n": 10,
+        "successes": 9,
+        "sr": 0.9
+      }
+    }
+  },
+  "blind2_50": {
+    "success_rate": 0.92,
+    "successes": 46,
+    "n": 50,
+    "success_ci95": [
+      0.8116149745493629,
+      0.9684509967442093
+    ],
+    "mean_max_coverage": 0.935744639635086,
+    "mean_max_iou": 0.8859642201662064,
+    "mean_steps": 1315.04,
+    "mean_success_steps": 1220.695652173913,
+    "angle_buckets": {
+      "0-45deg": {
+        "n": 12,
+        "successes": 11,
+        "sr": 0.9166666666666666
+      },
+      "45-90deg": {
+        "n": 14,
+        "successes": 14,
+        "sr": 1.0
+      },
+      "90-135deg": {
+        "n": 11,
+        "successes": 11,
+        "sr": 1.0
+      },
+      "135-180deg": {
+        "n": 13,
+        "successes": 10,
+        "sr": 0.7692307692307693
+      }
+    }
+  },
+  "zero_image_control": {
+    "success_rate": 0.0,
+    "successes": 0,
+    "n": 20,
+    "success_ci95": [
+      -1.3877787807814457e-17,
+      0.16113012549493322
+    ],
+    "mean_max_coverage": 0.20224626848939806,
+    "mean_max_iou": 0.12020114683546126,
+    "mean_steps": 2400.0,
+    "mean_success_steps": null,
+    "angle_buckets": {
+      "0-45deg": {
+        "n": 3,
+        "successes": 0,
+        "sr": 0.0
+      },
+      "45-90deg": {
+        "n": 5,
+        "successes": 0,
+        "sr": 0.0
+      },
+      "90-135deg": {
+        "n": 5,
+        "successes": 0,
+        "sr": 0.0
+      },
+      "135-180deg": {
+        "n": 7,
+        "successes": 0,
+        "sr": 0.0
+      }
+    }
+  }
+}

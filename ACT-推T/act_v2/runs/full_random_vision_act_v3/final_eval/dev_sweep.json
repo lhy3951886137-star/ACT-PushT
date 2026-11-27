@@ -1,0 +1,333 @@
+{
+  "checkpoint": "act_v2\\runs\\full_random_vision_act_v3\\best.pt",
+  "sha256": "14baebb6f30200e029c86f887a40e004055017a7aedf4bba4ffb5985fa6a0a3c",
+  "best": {
+    "tag": "exec_18",
+    "k": 18,
+    "sched": null,
+    "fw": false,
+    "success_rate": 0.92,
+    "successes": 46,
+    "n": 50,
+    "success_ci95": [
+      0.8116149745493629,
+      0.9684509967442093
+    ],
+    "mean_max_coverage": 0.9223118428885937,
+    "mean_max_iou": 0.8767079997062683,
+    "mean_steps": 1323.34,
+    "mean_success_steps": 1269.608695652174,
+    "angle_buckets": {
+      "0-45deg": {
+        "n": 8,
+        "successes": 8,
+        "sr": 1.0
+      },
+      "45-90deg": {
+        "n": 13,
+        "successes": 11,
+        "sr": 0.8461538461538461
+      },
+      "90-135deg": {
+        "n": 15,
+        "successes": 14,
+        "sr": 0.9333333333333333
+      },
+      "135-180deg": {
+        "n": 14,
+        "successes": 13,
+        "sr": 0.9285714285714286
+      }
+    }
+  },
+  "results": [
+    {
+      "tag": "exec_18",
+      "k": 18,
+      "sched": null,
+      "fw": false,
+      "success_rate": 0.92,
+      "successes": 46,
+      "n": 50,
+      "success_ci95": [
+        0.8116149745493629,
+        0.9684509967442093
+      ],
+      "mean_max_coverage": 0.9223118428885937,
+      "mean_max_iou": 0.8767079997062683,
+      "mean_steps": 1323.34,
+      "mean_success_steps": 1269.608695652174,
+      "angle_buckets": {
+        "0-45deg": {
+          "n": 8,
+          "successes": 8,
+          "sr": 1.0
+        },
+        "45-90deg": {
+          "n": 13,
+          "successes": 11,
+          "sr": 0.8461538461538461
+        },
+        "90-135deg": {
+          "n": 15,
+          "successes": 14,
+          "sr": 0.9333333333333333
+        },
+        "135-180deg": {
+          "n": 14,
+          "successes": 13,
+          "sr": 0.9285714285714286
+        }
+      }
+    },
+    {
+      "tag": "ap_14_18_16_20_fw",
+      "k": 14,
+      "sched": [
+        14,
+        18,
+        16,
+        20
+      ],
+      "fw": true,
+      "success_rate": 0.92,
+      "successes": 46,
+      "n": 50,
+      "success_ci95": [
+        0.8116149745493629,
+        0.9684509967442093
+      ],
+      "mean_max_coverage": 0.909565312564373,
+      "mean_max_iou": 0.8621864284202456,
+      "mean_steps": 1288.56,
+      "mean_success_steps": 1191.9130434782608,
+      "angle_buckets": {
+        "0-45deg": {
+          "n": 8,
+          "successes": 8,
+          "sr": 1.0
+        },
+        "45-90deg": {
+          "n": 13,
+          "successes": 12,
+          "sr": 0.9230769230769231
+        },
+        "90-135deg": {
+          "n": 15,
+          "successes": 14,
+          "sr": 0.9333333333333333
+        },
+        "135-180deg": {
+          "n": 14,
+          "successes": 12,
+          "sr": 0.8571428571428571
+        }
+      }
+    },
+    {
+      "tag": "ap_12_16_18_14",
+      "k": 12,
+      "sched": [
+        12,
+        16,
+        18,
+        14
+      ],
+      "fw": false,
+      "success_rate": 0.9,
+      "successes": 45,
+      "n": 50,
+      "success_ci95": [
+        0.7863950966521162,
+        0.956524876008429
+      ],
+      "mean_max_coverage": 0.9079437756538391,
+      "mean_max_iou": 0.8587691596150399,
+      "mean_steps": 1274.08,
+      "mean_success_steps": 1191.2222222222222,
+      "angle_buckets": {
+        "0-45deg": {
+          "n": 8,
+          "successes": 8,
+          "sr": 1.0
+        },
+        "45-90deg": {
+          "n": 13,
+          "successes": 11,
+          "sr": 0.8461538461538461
+        },
+        "90-135deg": {
+          "n": 15,
+          "successes": 15,
+          "sr": 1.0
+        },
+        "135-180deg": {
+          "n": 14,
+          "successes": 11,
+          "sr": 0.7857142857142857
+        }
+      }
+    },
+    {
+      "tag": "exec_12",
+      "k": 12,
+      "sched": null,
+      "fw": false,
+      "success_rate": 0.88,
+      "successes": 44,
+      "n": 50,
+      "success_ci95": [
+        0.7619492111337642,
+        0.9438247628937535
+      ],
+      "mean_max_coverage": 0.8842193548381329,
+      "mean_max_iou": 0.8343111777305603,
+      "mean_steps": 1221.02,
+      "mean_success_steps": 1146.090909090909,
+      "angle_buckets": {
+        "0-45deg": {
+          "n": 8,
+          "successes": 8,
+          "sr": 1.0
+        },
+        "45-90deg": {
+          "n": 13,
+          "successes": 9,
+          "sr": 0.6923076923076923
+        },
+        "90-135deg": {
+          "n": 15,
+          "successes": 15,
+          "sr": 1.0
+        },
+        "135-180deg": {
+          "n": 14,
+          "successes": 12,
+          "sr": 0.8571428571428571
+        }
+      }
+    },
+    {
+      "tag": "exec_14",
+      "k": 14,
+      "sched": null,
+      "fw": false,
+      "success_rate": 0.86,
+      "successes": 43,
+      "n": 50,
+      "success_ci95": [
+        0.738135428014719,
+        0.9304925473797714
+      ],
+      "mean_max_coverage": 0.8881430916488171,
+      "mean_max_iou": 0.8383890020847321,
+      "mean_steps": 1377.76,
+      "mean_success_steps": 1304.093023255814,
+      "angle_buckets": {
+        "0-45deg": {
+          "n": 8,
+          "successes": 7,
+          "sr": 0.875
+        },
+        "45-90deg": {
+          "n": 13,
+          "successes": 11,
+          "sr": 0.8461538461538461
+        },
+        "90-135deg": {
+          "n": 15,
+          "successes": 15,
+          "sr": 1.0
+        },
+        "135-180deg": {
+          "n": 14,
+          "successes": 10,
+          "sr": 0.7142857142857143
+        }
+      }
+    },
+    {
+      "tag": "ap_12_16_18_14_fw",
+      "k": 12,
+      "sched": [
+        12,
+        16,
+        18,
+        14
+      ],
+      "fw": true,
+      "success_rate": 0.84,
+      "successes": 42,
+      "n": 50,
+      "success_ci95": [
+        0.7148551903823401,
+        0.9166267863791231
+      ],
+      "mean_max_coverage": 0.8823804503679276,
+      "mean_max_iou": 0.8265959632396698,
+      "mean_steps": 1342.42,
+      "mean_success_steps": 1186.2380952380952,
+      "angle_buckets": {
+        "0-45deg": {
+          "n": 8,
+          "successes": 7,
+          "sr": 0.875
+        },
+        "45-90deg": {
+          "n": 13,
+          "successes": 12,
+          "sr": 0.9230769230769231
+        },
+        "90-135deg": {
+          "n": 15,
+          "successes": 14,
+          "sr": 0.9333333333333333
+        },
+        "135-180deg": {
+          "n": 14,
+          "successes": 9,
+          "sr": 0.6428571428571429
+        }
+      }
+    },
+    {
+      "tag": "exec_16",
+      "k": 16,
+      "sched": null,
+      "fw": false,
+      "success_rate": 0.82,
+      "successes": 41,
+      "n": 50,
+      "success_ci95": [
+        0.6920368054529739,
+        0.902299172675462
+      ],
+      "mean_max_coverage": 0.8876107214391231,
+      "mean_max_iou": 0.8349276876449585,
+      "mean_steps": 1361.2,
+      "mean_success_steps": 1176.5365853658536,
+      "angle_buckets": {
+        "0-45deg": {
+          "n": 8,
+          "successes": 7,
+          "sr": 0.875
+        },
+        "45-90deg": {
+          "n": 13,
+          "successes": 11,
+          "sr": 0.8461538461538461
+        },
+        "90-135deg": {
+          "n": 15,
+          "successes": 12,
+          "sr": 0.8
+        },
+        "135-180deg": {
+          "n": 14,
+          "successes": 11,
+          "sr": 0.7857142857142857
+        }
+      }
+    }
+  ]
+}

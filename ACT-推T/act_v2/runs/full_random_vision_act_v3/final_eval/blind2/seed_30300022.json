@@ -1,0 +1,12 @@
+{
+  "seed": 30300022,
+  "init_angle_deg": 129.4910430908203,
+  "init_dist_cm": 8.014282584190369,
+  "success": true,
+  "max_coverage": 0.9508950710296631,
+  "final_coverage": 0.9508950710296631,
+  "max_iou": 0.9063869714736938,
+  "distance_at_max_mm": 2.9370570555329323,
+  "angle_at_max_deg": 0.43614324927330017,
+  "steps": 1629
+}

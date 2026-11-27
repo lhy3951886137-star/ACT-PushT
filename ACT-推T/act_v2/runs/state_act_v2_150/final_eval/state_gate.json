@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "required": 0.85,
+  "checkpoint": "act_v2\\runs\\state_act_v2_150\\best.pt",
+  "sha256": "db5b307eec1b7c194a6ec35f65a3d7292ac6d8d7ac6fa40d78d6bc78b1654fc2",
+  "n_action_steps": 8,
+  "dev_best": {
+    "n_action_steps": 8,
+    "success_rate": 0.98,
+    "successes": 49,
+    "n": 50,
+    "success_ci95": [
+      0.8950431352816304,
+      0.9964608319110235
+    ],
+    "mean_max_coverage": 0.9518760466575622,
+    "mean_max_iou": 0.9082178568840027,
+    "mean_steps": 441.54,
+    "failed_mean_distance_mm": 4.5582568272948265,
+    "failed_mean_angle_deg": 1.1303857564926147
+  },
+  "confirmation": {
+    "success_rate": 1.0,
+    "successes": 50,
+    "n": 50,
+    "success_ci95": [
+      0.9286499658256813,
+      1.0
+    ],
+    "mean_max_coverage": 0.9526043725013733,
+    "mean_max_iou": 0.9095040380954742,
+    "mean_steps": 353.22,
+    "failed_mean_distance_mm": null,
+    "failed_mean_angle_deg": null
+  }
+}

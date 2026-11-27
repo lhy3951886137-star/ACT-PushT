@@ -1,0 +1,10 @@
+<mujoco model="push_t">
+  <worldbody><body><body name="object">
+    <geom name="cap" type="box" size="0.075 0.01875 0.015" pos="0.0 0.056249999999999994 0.0" mass="0.12" friction=".12 .005 .0001" rgba="0.1 0.4 0.9 1" group="0" solref=".03 1.2" solimp=".9 .95 .001" />
+    <geom name="stem" type="box" size="0.01875 0.056249999999999994 0.015" pos="0.0 -0.01875 0.0" mass="0.09" friction=".12 .005 .0001" rgba="0.1 0.4 0.9 1" group="0" solref=".03 1.2" solimp=".9 .95 .001" />
+  </body>
+    <site name="bottom_site" pos="0 0 -0.015" size="0.001" />
+    <site name="top_site" pos="0 0 0.015" size="0.001" />
+    <site name="horizontal_radius_site" pos="0.10625000000000001 0 0" size="0.001" />
+  </body></worldbody>
+</mujoco>

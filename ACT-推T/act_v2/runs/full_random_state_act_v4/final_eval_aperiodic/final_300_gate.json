@@ -1,0 +1,300 @@
+{
+  "total_300_sr": 0.92,
+  "total_300_successes": 276,
+  "total_300_n": 300,
+  "total_300_ci95": [
+    0.883725988586447,
+    0.9456535302154552
+  ],
+  "splits": {
+    "dev50": {
+      "name": "v4_ap_fw_dev50",
+      "checkpoint": "act_v2\\runs\\full_random_state_act_v4\\latest.pt",
+      "sha256": "af5b6ad11447a5f1b933e93cbf0e71834a710d3824667ad9dd7ad4f624ada575",
+      "action_schedule": [
+        12,
+        16,
+        18,
+        14
+      ],
+      "mc_dropout_on_freeze": true,
+      "seed_range": [
+        30100000,
+        30100049
+      ],
+      "success_rate": 0.96,
+      "successes": 48,
+      "n": 50,
+      "success_ci95": [
+        0.8653966212204534,
+        0.9889613473391734
+      ],
+      "mean_max_coverage": 0.933450967669487,
+      "mean_max_iou": 0.889344228208065,
+      "mean_steps": 1351.9,
+      "failed_seeds": [
+        30100003,
+        30100046
+      ],
+      "angle_buckets": {
+        "0-45deg": {
+          "n": 8,
+          "successes": 7,
+          "sr": 0.875
+        },
+        "45-90deg": {
+          "n": 13,
+          "successes": 13,
+          "sr": 1.0
+        },
+        "90-135deg": {
+          "n": 15,
+          "successes": 14,
+          "sr": 0.9333333333333333
+        },
+        "135-180deg": {
+          "n": 14,
+          "successes": 14,
+          "sr": 1.0
+        }
+      },
+      "seconds": 89.0
+    },
+    "conf1_50": {
+      "name": "v4_ap_fw_conf1_50",
+      "checkpoint": "act_v2\\runs\\full_random_state_act_v4\\latest.pt",
+      "sha256": "af5b6ad11447a5f1b933e93cbf0e71834a710d3824667ad9dd7ad4f624ada575",
+      "action_schedule": [
+        12,
+        16,
+        18,
+        14
+      ],
+      "mc_dropout_on_freeze": true,
+      "seed_range": [
+        30200000,
+        30200049
+      ],
+      "success_rate": 0.94,
+      "successes": 47,
+      "n": 50,
+      "success_ci95": [
+        0.8378265662912299,
+        0.9793854036353695
+      ],
+      "mean_max_coverage": 0.9174615782499314,
+      "mean_max_iou": 0.8723281416296959,
+      "mean_steps": 1336.66,
+      "failed_seeds": [
+        30200020,
+        30200032,
+        30200048
+      ],
+      "angle_buckets": {
+        "0-45deg": {
+          "n": 12,
+          "successes": 11,
+          "sr": 0.9166666666666666
+        },
+        "45-90deg": {
+          "n": 14,
+          "successes": 14,
+          "sr": 1.0
+        },
+        "90-135deg": {
+          "n": 14,
+          "successes": 13,
+          "sr": 0.9285714285714286
+        },
+        "135-180deg": {
+          "n": 10,
+          "successes": 9,
+          "sr": 0.9
+        }
+      },
+      "seconds": 78.0
+    },
+    "blind2_100": {
+      "name": "v4_ap_fw_blind2_100",
+      "checkpoint": "act_v2\\runs\\full_random_state_act_v4\\latest.pt",
+      "sha256": "af5b6ad11447a5f1b933e93cbf0e71834a710d3824667ad9dd7ad4f624ada575",
+      "action_schedule": [
+        12,
+        16,
+        18,
+        14
+      ],
+      "mc_dropout_on_freeze": true,
+      "seed_range": [
+        30300000,
+        30300099
+      ],
+      "success_rate": 0.9,
+      "successes": 90,
+      "n": 100,
+      "success_ci95": [
+        0.8256326956323347,
+        0.9447714583868639
+      ],
+      "mean_max_coverage": 0.9167397749423981,
+      "mean_max_iou": 0.867127755060792,
+      "mean_steps": 1319.6,
+      "failed_seeds": [
+        30300006,
+        30300016,
+        30300024,
+        30300029,
+        30300049,
+        30300079,
+        30300091,
+        30300094,
+        30300096,
+        30300099
+      ],
+      "angle_buckets": {
+        "0-45deg": {
+          "n": 28,
+          "successes": 26,
+          "sr": 0.9285714285714286
+        },
+        "45-90deg": {
+          "n": 25,
+          "successes": 23,
+          "sr": 0.92
+        },
+        "90-135deg": {
+          "n": 24,
+          "successes": 19,
+          "sr": 0.7916666666666666
+        },
+        "135-180deg": {
+          "n": 23,
+          "successes": 22,
+          "sr": 0.9565217391304348
+        }
+      },
+      "seconds": 172.3
+    },
+    "virgin3_100": {
+      "name": "v4_ap_fw_virgin3_100",
+      "checkpoint": "act_v2\\runs\\full_random_state_act_v4\\latest.pt",
+      "sha256": "af5b6ad11447a5f1b933e93cbf0e71834a710d3824667ad9dd7ad4f624ada575",
+      "action_schedule": [
+        12,
+        16,
+        18,
+        14
+      ],
+      "mc_dropout_on_freeze": true,
+      "seed_range": [
+        30400000,
+        30400099
+      ],
+      "success_rate": 0.91,
+      "successes": 91,
+      "n": 100,
+      "success_ci95": [
+        0.8377362530335634,
+        0.9519280048361151
+      ],
+      "mean_max_coverage": 0.9081608716398477,
+      "mean_max_iou": 0.8599375527352094,
+      "mean_steps": 1355.24,
+      "failed_seeds": [
+        30400016,
+        30400026,
+        30400028,
+        30400033,
+        30400056,
+        30400069,
+        30400085,
+        30400092,
+        30400099
+      ],
+      "angle_buckets": {
+        "0-45deg": {
+          "n": 29,
+          "successes": 26,
+          "sr": 0.896551724137931
+        },
+        "45-90deg": {
+          "n": 29,
+          "successes": 27,
+          "sr": 0.9310344827586207
+        },
+        "90-135deg": {
+          "n": 17,
+          "successes": 16,
+          "sr": 0.9411764705882353
+        },
+        "135-180deg": {
+          "n": 25,
+          "successes": 22,
+          "sr": 0.88
+        }
+      },
+      "seconds": 156.8
+    },
+    "virgin3_100_pure": {
+      "name": "v4_ap_pure_virgin3_100",
+      "checkpoint": "act_v2\\runs\\full_random_state_act_v4\\latest.pt",
+      "sha256": "af5b6ad11447a5f1b933e93cbf0e71834a710d3824667ad9dd7ad4f624ada575",
+      "action_schedule": [
+        12,
+        16,
+        18,
+        14
+      ],
+      "mc_dropout_on_freeze": false,
+      "seed_range": [
+        30400000,
+        30400099
+      ],
+      "success_rate": 0.9,
+      "successes": 90,
+      "n": 100,
+      "success_ci95": [
+        0.8256326956323347,
+        0.9447714583868639
+      ],
+      "mean_max_coverage": 0.9067199835926294,
+      "mean_max_iou": 0.8576416032761336,
+      "mean_steps": 1370.91,
+      "failed_seeds": [
+        30400000,
+        30400016,
+        30400026,
+        30400028,
+        30400033,
+        30400056,
+        30400069,
+        30400085,
+        30400092,
+        30400099
+      ],
+      "angle_buckets": {
+        "0-45deg": {
+          "n": 29,
+          "successes": 26,
+          "sr": 0.896551724137931
+        },
+        "45-90deg": {
+          "n": 29,
+          "successes": 27,
+          "sr": 0.9310344827586207
+        },
+        "90-135deg": {
+          "n": 17,
+          "successes": 16,
+          "sr": 0.9411764705882353
+        },
+        "135-180deg": {
+          "n": 25,
+          "successes": 21,
+          "sr": 0.84
+        }
+      },
+      "seconds": 159.8
+    }
+  }
+}

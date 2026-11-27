@@ -1,0 +1,169 @@
+{
+  "full-vision": {
+    "run": "full_random_vision_act_v3",
+    "title": "全随机 360° · 纯视觉双相机 Vision-ACT v3",
+    "family": "full-vision",
+    "scenario": "全随机初始位置 + 全随机360°角度；策略仅输入双相机RGB与机器人XY",
+    "algorithm": "ACT: dual from-scratch GroupNorm ResNet18 + multi-scale SpatialSoftmax keypoints + Pre-LN DETR; training-only SE(2) auxiliary geometry; aperiodic chunking with MC-dropout freeze wake",
+    "inference": {
+      "n_action_steps": 14,
+      "action_schedule": [
+        14,
+        18,
+        16,
+        20
+      ],
+      "mc_dropout_on_freeze": true
+    },
+    "splits": {
+      "dev": [
+        30100000,
+        50
+      ],
+      "blind": [
+        30200000,
+        50
+      ],
+      "blind2": [
+        30300000,
+        50
+      ],
+      "zero": [
+        30100000,
+        20
+      ]
+    },
+    "training_module": "act_v2.full_random_vision",
+    "training_overrides": {
+      "init_from": "act_v2/runs/full_random_vision_act_v2/best.pt",
+      "extra_rgb_dirs": [
+        "act_v2/full_random_rgb_vis_dagger"
+      ],
+      "balanced_angles": true,
+      "speed_power": 0.65,
+      "vis_dagger_boost": 3.0,
+      "r3_boost": 2.0
+    },
+    "data_categories": [
+      "full-rgb",
+      "full-vis-dagger"
+    ],
+    "report": "final_eval_ap14181620/final_vision_ap_gate.json",
+    "result": "Dev 46/50=92%；盲测1 46/50=92%；盲测2 46/50=92%；盲测合并92/100；图像置零0/20；盲测成功平均1195.6步。",
+    "checkpoint": "act_v2/runs/full_random_vision_act_v3/best.pt",
+    "sha256": "14baebb6f30200e029c86f887a40e004055017a7aedf4bba4ffb5985fa6a0a3c",
+    "config": "act_v2/runs/full_random_vision_act_v3/config.json"
+  },
+  "full-state": {
+    "run": "full_random_state_act_v4",
+    "title": "全随机 360° · State-ACT v4",
+    "family": "full-state",
+    "scenario": "全随机初始位置 + 全随机360°角度；适合可获取推杆、T块与目标状态的仿真或状态感知系统",
+    "algorithm": "ACT: full28 continuous branch-cut-free multi-scale SE(2) geometric features + Pre-LN DETR; aperiodic chunking with MC-dropout freeze wake",
+    "inference": {
+      "n_action_steps": 12,
+      "action_schedule": [
+        12,
+        16,
+        18,
+        14
+      ],
+      "mc_dropout_on_freeze": true
+    },
+    "splits": {
+      "dev": [
+        30100000,
+        50
+      ],
+      "blind": [
+        30200000,
+        50
+      ],
+      "blind2": [
+        30300000,
+        100
+      ],
+      "blind3": [
+        30400000,
+        100
+      ]
+    },
+    "training_module": "act_v2.full_random_state",
+    "training_overrides": {
+      "init_from": "act_v2/runs/full_random_state_act_v3/latest.pt"
+    },
+    "data_categories": [
+      "full-state"
+    ],
+    "report": "final_eval_aperiodic/final_300_gate.json",
+    "result": "Dev 48/50=96%；独立测试1 47/50=94%；独立测试2 90/100=90%；独立测试3 91/100=91%；含50个Dev的300场景总计276/300=92%；独立测试250场景合计228/250=91.2%。",
+    "checkpoint": "act_v2/runs/full_random_state_act_v4/latest.pt",
+    "sha256": "af5b6ad11447a5f1b933e93cbf0e71834a710d3824667ad9dd7ad4f624ada575",
+    "config": "act_v2/runs/full_random_state_act_v4/config.json"
+  },
+  "small-state": {
+    "run": "state_act_v2_150",
+    "title": "小范围高精度 · State-ACT（150轨迹）",
+    "family": "small-state",
+    "scenario": "小范围平移、近目标角度的高精度Push-T；需要机器人、T块、目标状态；不适用于未经验证的全360°初始条件",
+    "algorithm": "ACT: legacy16 geometry with two observation frames + Pre-LN DETR; weighted masked L1; MIN_MAX normalization; EMA",
+    "inference": {
+      "n_action_steps": 8
+    },
+    "splits": {
+      "dev": [
+        9100000,
+        50
+      ],
+      "blind": [
+        9200000,
+        50
+      ]
+    },
+    "training_module": "act_v2.train_state",
+    "training_overrides": {},
+    "data_categories": [
+      "precision-state"
+    ],
+    "report": "final_eval/state_gate.json",
+    "result": "Dev 49/50=98%；独立盲测50/50=100%。",
+    "checkpoint": "act_v2/runs/state_act_v2_150/best.pt",
+    "sha256": "db5b307eec1b7c194a6ec35f65a3d7292ac6d8d7ac6fa40d78d6bc78b1654fc2",
+    "config": "act_v2/runs/state_act_v2_150/config.json"
+  },
+  "small-vision": {
+    "run": "vision_act_v2_kp",
+    "title": "小范围高精度 · 纯视觉双相机 Vision-ACT",
+    "family": "small-vision",
+    "scenario": "小范围高精度Push-T；双相机RGB与机器人XY；不读取T块、目标真值作为策略输入",
+    "algorithm": "ACT: dual from-scratch GroupNorm ResNet18 + multi-scale SpatialSoftmax keypoint bottleneck + Pre-LN DETR; weighted masked L1; EMA",
+    "inference": {
+      "n_action_steps": 8
+    },
+    "splits": {
+      "dev": [
+        10100000,
+        50
+      ],
+      "blind": [
+        10200000,
+        50
+      ],
+      "zero": [
+        10100000,
+        20
+      ]
+    },
+    "training_module": "act_v2.train_vision",
+    "training_overrides": {},
+    "data_categories": [
+      "precision-state",
+      "precision-rgb"
+    ],
+    "report": "final_eval/vision_gate.json",
+    "result": "Dev 42/50=84%；独立盲测45/50=90%；图像置零0/20。原始gate要求Dev和盲测均≥85%，因此passed=false，原报告保持原样。",
+    "checkpoint": "act_v2/runs/vision_act_v2_kp/best.pt",
+    "sha256": "6e4486a2d0f9669d59892547b2f08b13242b16f804c34a67117fd42086b4bd52",
+    "config": "act_v2/runs/vision_act_v2_kp/config.json"
+  }
+}

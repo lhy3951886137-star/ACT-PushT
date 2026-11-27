@@ -1,0 +1,516 @@
+{
+  "success_rate": 0.9,
+  "successes": 45,
+  "n": 50,
+  "success_ci95": [
+    0.7863950966521162,
+    0.956524876008429
+  ],
+  "mean_max_coverage": 0.949750792980194,
+  "mean_max_iou": 0.9044320487976074,
+  "mean_steps": 700.48,
+  "failed_mean_distance_mm": 3.070408117491752,
+  "failed_mean_angle_deg": 2.0491981148719787,
+  "episodes": [
+    {
+      "seed": 10200000,
+      "success": false,
+      "max_coverage": 0.9146401882171631,
+      "final_coverage": 0.4188084900379181,
+      "max_iou": 0.8427069187164307,
+      "distance_at_max_mm": 0.8494684589095414,
+      "angle_at_max_deg": 4.439915180206299,
+      "steps": 2000
+    },
+    {
+      "seed": 10200001,
+      "success": true,
+      "max_coverage": 0.9539924263954163,
+      "final_coverage": 0.9539924263954163,
+      "max_iou": 0.9120320677757263,
+      "distance_at_max_mm": 2.062672981992364,
+      "angle_at_max_deg": 1.5467488765716553,
+      "steps": 180
+    },
+    {
+      "seed": 10200002,
+      "success": true,
+      "max_coverage": 0.9537516236305237,
+      "final_coverage": 0.9537516236305237,
+      "max_iou": 0.9115920066833496,
+      "distance_at_max_mm": 2.4047449696809053,
+      "angle_at_max_deg": 0.08670773357152939,
+      "steps": 352
+    },
+    {
+      "seed": 10200003,
+      "success": true,
+      "max_coverage": 0.9501093029975891,
+      "final_coverage": 0.9501093029975891,
+      "max_iou": 0.9049602150917053,
+      "distance_at_max_mm": 1.2211183784529567,
+      "angle_at_max_deg": 2.392622709274292,
+      "steps": 274
+    },
+    {
+      "seed": 10200004,
+      "success": true,
+      "max_coverage": 0.9515615105628967,
+      "final_coverage": 0.9515615105628967,
+      "max_iou": 0.9075987935066223,
+      "distance_at_max_mm": 2.3002056404948235,
+      "angle_at_max_deg": 0.6909928321838379,
+      "steps": 326
+    },
+    {
+      "seed": 10200005,
+      "success": true,
+      "max_coverage": 0.9537694454193115,
+      "final_coverage": 0.9537694454193115,
+      "max_iou": 0.911624550819397,
+      "distance_at_max_mm": 2.813508966937661,
+      "angle_at_max_deg": 0.2366914451122284,
+      "steps": 473
+    },
+    {
+      "seed": 10200006,
+      "success": false,
+      "max_coverage": 0.9226922392845154,
+      "final_coverage": 0.25785017013549805,
+      "max_iou": 0.8564797043800354,
+      "distance_at_max_mm": 4.32575773447752,
+      "angle_at_max_deg": 1.2431379556655884,
+      "steps": 2000
+    },
+    {
+      "seed": 10200007,
+      "success": true,
+      "max_coverage": 0.9518718123435974,
+      "final_coverage": 0.9518718123435974,
+      "max_iou": 0.9081636071205139,
+      "distance_at_max_mm": 1.392687438055873,
+      "angle_at_max_deg": 2.2254247665405273,
+      "steps": 1672
+    },
+    {
+      "seed": 10200008,
+      "success": true,
+      "max_coverage": 0.9501091837882996,
+      "final_coverage": 0.9501091837882996,
+      "max_iou": 0.9049599170684814,
+      "distance_at_max_mm": 2.583986846730113,
+      "angle_at_max_deg": 0.2840428352355957,
+      "steps": 627
+    },
+    {
+      "seed": 10200009,
+      "success": true,
+      "max_coverage": 0.950020432472229,
+      "final_coverage": 0.950020432472229,
+      "max_iou": 0.9047989845275879,
+      "distance_at_max_mm": 1.9813694525510073,
+      "angle_at_max_deg": 1.9495962858200073,
+      "steps": 335
+    },
+    {
+      "seed": 10200010,
+      "success": true,
+      "max_coverage": 0.9547417163848877,
+      "final_coverage": 0.9547417163848877,
+      "max_iou": 0.9134026169776917,
+      "distance_at_max_mm": 2.678027143701911,
+      "angle_at_max_deg": 0.3279918432235718,
+      "steps": 562
+    },
+    {
+      "seed": 10200011,
+      "success": true,
+      "max_coverage": 0.9552204012870789,
+      "final_coverage": 0.9552204012870789,
+      "max_iou": 0.9142793416976929,
+      "distance_at_max_mm": 1.8263875972479582,
+      "angle_at_max_deg": 1.7295016050338745,
+      "steps": 665
+    },
+    {
+      "seed": 10200012,
+      "success": false,
+      "max_coverage": 0.9412252902984619,
+      "final_coverage": 0.9412252306938171,
+      "max_iou": 0.888975977897644,
+      "distance_at_max_mm": 3.4548877738416195,
+      "angle_at_max_deg": 0.5963958501815796,
+      "steps": 2000
+    },
+    {
+      "seed": 10200013,
+      "success": true,
+      "max_coverage": 0.9512584209442139,
+      "final_coverage": 0.9512584209442139,
+      "max_iou": 0.90704745054245,
+      "distance_at_max_mm": 1.8604997312650084,
+      "angle_at_max_deg": 1.9972763061523438,
+      "steps": 274
+    },
+    {
+      "seed": 10200014,
+      "success": true,
+      "max_coverage": 0.9513334035873413,
+      "final_coverage": 0.9513334035873413,
+      "max_iou": 0.9071838855743408,
+      "distance_at_max_mm": 2.5442205369472504,
+      "angle_at_max_deg": 0.9802850484848022,
+      "steps": 281
+    },
+    {
+      "seed": 10200015,
+      "success": true,
+      "max_coverage": 0.9532803893089294,
+      "final_coverage": 0.9532803893089294,
+      "max_iou": 0.9107314348220825,
+      "distance_at_max_mm": 2.418817952275276,
+      "angle_at_max_deg": 0.7439966797828674,
+      "steps": 291
+    },
+    {
+      "seed": 10200016,
+      "success": true,
+      "max_coverage": 0.9542725682258606,
+      "final_coverage": 0.9542725682258606,
+      "max_iou": 0.9125442504882812,
+      "distance_at_max_mm": 2.273940946906805,
+      "angle_at_max_deg": 0.6708159446716309,
+      "steps": 396
+    },
+    {
+      "seed": 10200017,
+      "success": true,
+      "max_coverage": 0.9502391815185547,
+      "final_coverage": 0.9502391815185547,
+      "max_iou": 0.9051958918571472,
+      "distance_at_max_mm": 2.5036034639924765,
+      "angle_at_max_deg": 0.9314973950386047,
+      "steps": 923
+    },
+    {
+      "seed": 10200018,
+      "success": true,
+      "max_coverage": 0.9524283409118652,
+      "final_coverage": 0.9524283409118652,
+      "max_iou": 0.9091772437095642,
+      "distance_at_max_mm": 2.6270411908626556,
+      "angle_at_max_deg": 0.0018126997165381908,
+      "steps": 308
+    },
+    {
+      "seed": 10200019,
+      "success": true,
+      "max_coverage": 0.9501308798789978,
+      "final_coverage": 0.9501308798789978,
+      "max_iou": 0.9049993753433228,
+      "distance_at_max_mm": 0.8582726586610079,
+      "angle_at_max_deg": 2.484344244003296,
+      "steps": 287
+    },
+    {
+      "seed": 10200020,
+      "success": true,
+      "max_coverage": 0.9526532888412476,
+      "final_coverage": 0.9526532888412476,
+      "max_iou": 0.9095872640609741,
+      "distance_at_max_mm": 3.014608984813094,
+      "angle_at_max_deg": 0.09773466736078262,
+      "steps": 464
+    },
+    {
+      "seed": 10200021,
+      "success": false,
+      "max_coverage": 0.9153817296028137,
+      "final_coverage": 0.2428664267063141,
+      "max_iou": 0.8439666628837585,
+      "distance_at_max_mm": 3.415253944694996,
+      "angle_at_max_deg": 3.427495002746582,
+      "steps": 2000
+    },
+    {
+      "seed": 10200022,
+      "success": true,
+      "max_coverage": 0.9501078128814697,
+      "final_coverage": 0.9501078128814697,
+      "max_iou": 0.9049575328826904,
+      "distance_at_max_mm": 1.6692697536200285,
+      "angle_at_max_deg": 2.2007668018341064,
+      "steps": 861
+    },
+    {
+      "seed": 10200023,
+      "success": true,
+      "max_coverage": 0.9521914124488831,
+      "final_coverage": 0.9521914124488831,
+      "max_iou": 0.908745527267456,
+      "distance_at_max_mm": 2.1163602359592915,
+      "angle_at_max_deg": 1.6563760042190552,
+      "steps": 845
+    },
+    {
+      "seed": 10200024,
+      "success": true,
+      "max_coverage": 0.9518008828163147,
+      "final_coverage": 0.9518008828163147,
+      "max_iou": 0.9080344438552856,
+      "distance_at_max_mm": 0.855049176607281,
+      "angle_at_max_deg": 2.398179054260254,
+      "steps": 789
+    },
+    {
+      "seed": 10200025,
+      "success": true,
+      "max_coverage": 0.9531990885734558,
+      "final_coverage": 0.9531990885734558,
+      "max_iou": 0.910582959651947,
+      "distance_at_max_mm": 2.233960898593068,
+      "angle_at_max_deg": 1.2101333141326904,
+      "steps": 975
+    },
+    {
+      "seed": 10200026,
+      "success": true,
+      "max_coverage": 0.9533790349960327,
+      "final_coverage": 0.9533790349960327,
+      "max_iou": 0.9109114408493042,
+      "distance_at_max_mm": 2.2517673205584288,
+      "angle_at_max_deg": 1.1809176206588745,
+      "steps": 379
+    },
+    {
+      "seed": 10200027,
+      "success": true,
+      "max_coverage": 0.9539363384246826,
+      "final_coverage": 0.9539363384246826,
+      "max_iou": 0.9119295477867126,
+      "distance_at_max_mm": 2.6094727218151093,
+      "angle_at_max_deg": 0.5936241149902344,
+      "steps": 602
+    },
+    {
+      "seed": 10200028,
+      "success": true,
+      "max_coverage": 0.9511656165122986,
+      "final_coverage": 0.9511656165122986,
+      "max_iou": 0.9068787097930908,
+      "distance_at_max_mm": 1.9847850780934095,
+      "angle_at_max_deg": 1.8596800565719604,
+      "steps": 907
+    },
+    {
+      "seed": 10200029,
+      "success": true,
+      "max_coverage": 0.9518234133720398,
+      "final_coverage": 0.9518234133720398,
+      "max_iou": 0.9080753922462463,
+      "distance_at_max_mm": 0.7430999539792538,
+      "angle_at_max_deg": 2.419480085372925,
+      "steps": 273
+    },
+    {
+      "seed": 10200030,
+      "success": false,
+      "max_coverage": 0.9445893168449402,
+      "final_coverage": 0.8887937664985657,
+      "max_iou": 0.8949968814849854,
+      "distance_at_max_mm": 3.306672675535083,
+      "angle_at_max_deg": 0.539046585559845,
+      "steps": 2000
+    },
+    {
+      "seed": 10200031,
+      "success": true,
+      "max_coverage": 0.95265793800354,
+      "final_coverage": 0.95265793800354,
+      "max_iou": 0.909595787525177,
+      "distance_at_max_mm": 1.540732686407864,
+      "angle_at_max_deg": 2.0703535079956055,
+      "steps": 1298
+    },
+    {
+      "seed": 10200032,
+      "success": true,
+      "max_coverage": 0.9518651962280273,
+      "final_coverage": 0.9518651962280273,
+      "max_iou": 0.9081515073776245,
+      "distance_at_max_mm": 2.372447866946459,
+      "angle_at_max_deg": 0.8632695078849792,
+      "steps": 779
+    },
+    {
+      "seed": 10200033,
+      "success": true,
+      "max_coverage": 0.956292986869812,
+      "final_coverage": 0.956292986869812,
+      "max_iou": 0.9162465929985046,
+      "distance_at_max_mm": 2.040545456111431,
+      "angle_at_max_deg": 1.2551122903823853,
+      "steps": 956
+    },
+    {
+      "seed": 10200034,
+      "success": true,
+      "max_coverage": 0.9523571133613586,
+      "final_coverage": 0.9523571133613586,
+      "max_iou": 0.909047544002533,
+      "distance_at_max_mm": 2.254004590213299,
+      "angle_at_max_deg": 0.19558586180210114,
+      "steps": 386
+    },
+    {
+      "seed": 10200035,
+      "success": true,
+      "max_coverage": 0.954242467880249,
+      "final_coverage": 0.954242467880249,
+      "max_iou": 0.9124892354011536,
+      "distance_at_max_mm": 2.264880808070302,
+      "angle_at_max_deg": 0.7020881772041321,
+      "steps": 1889
+    },
+    {
+      "seed": 10200036,
+      "success": true,
+      "max_coverage": 0.9514210224151611,
+      "final_coverage": 0.9514210224151611,
+      "max_iou": 0.9073432683944702,
+      "distance_at_max_mm": 2.2251408081501722,
+      "angle_at_max_deg": 1.504563331604004,
+      "steps": 276
+    },
+    {
+      "seed": 10200037,
+      "success": true,
+      "max_coverage": 0.950525164604187,
+      "final_coverage": 0.950525164604187,
+      "max_iou": 0.9057151079177856,
+      "distance_at_max_mm": 2.4076311383396387,
+      "angle_at_max_deg": 0.7296624779701233,
+      "steps": 333
+    },
+    {
+      "seed": 10200038,
+      "success": true,
+      "max_coverage": 0.9502186179161072,
+      "final_coverage": 0.9502186179161072,
+      "max_iou": 0.905158519744873,
+      "distance_at_max_mm": 0.837533560115844,
+      "angle_at_max_deg": 2.482128143310547,
+      "steps": 413
+    },
+    {
+      "seed": 10200039,
+      "success": true,
+      "max_coverage": 0.9501126408576965,
+      "final_coverage": 0.9501126408576965,
+      "max_iou": 0.9049662947654724,
+      "distance_at_max_mm": 2.0086539443582296,
+      "angle_at_max_deg": 1.9385721683502197,
+      "steps": 322
+    },
+    {
+      "seed": 10200040,
+      "success": true,
+      "max_coverage": 0.9501177072525024,
+      "final_coverage": 0.9501177072525024,
+      "max_iou": 0.9049754738807678,
+      "distance_at_max_mm": 2.0668362267315388,
+      "angle_at_max_deg": 1.9019622802734375,
+      "steps": 358
+    },
+    {
+      "seed": 10200041,
+      "success": true,
+      "max_coverage": 0.954694926738739,
+      "final_coverage": 0.954694926738739,
+      "max_iou": 0.9133170247077942,
+      "distance_at_max_mm": 2.4448144249618053,
+      "angle_at_max_deg": 0.801683247089386,
+      "steps": 647
+    },
+    {
+      "seed": 10200042,
+      "success": true,
+      "max_coverage": 0.9523378610610962,
+      "final_coverage": 0.9523378610610962,
+      "max_iou": 0.9090124368667603,
+      "distance_at_max_mm": 2.3745798971503973,
+      "angle_at_max_deg": 0.20344707369804382,
+      "steps": 347
+    },
+    {
+      "seed": 10200043,
+      "success": true,
+      "max_coverage": 0.9514598250389099,
+      "final_coverage": 0.9514598250389099,
+      "max_iou": 0.9074138402938843,
+      "distance_at_max_mm": 2.315846271812916,
+      "angle_at_max_deg": 0.585676908493042,
+      "steps": 298
+    },
+    {
+      "seed": 10200044,
+      "success": true,
+      "max_coverage": 0.9530149698257446,
+      "final_coverage": 0.9530149698257446,
+      "max_iou": 0.9102470278739929,
+      "distance_at_max_mm": 2.2281326819211245,
+      "angle_at_max_deg": 1.3697694540023804,
+      "steps": 278
+    },
+    {
+      "seed": 10200045,
+      "success": true,
+      "max_coverage": 0.9536802172660828,
+      "final_coverage": 0.9536802172660828,
+      "max_iou": 0.9114614725112915,
+      "distance_at_max_mm": 1.531080692075193,
+      "angle_at_max_deg": 2.012356758117676,
+      "steps": 948
+    },
+    {
+      "seed": 10200046,
+      "success": true,
+      "max_coverage": 0.9510679244995117,
+      "final_coverage": 0.9510679244995117,
+      "max_iou": 0.9067012071609497,
+      "distance_at_max_mm": 1.8957855645567179,
+      "angle_at_max_deg": 1.9850211143493652,
+      "steps": 329
+    },
+    {
+      "seed": 10200047,
+      "success": true,
+      "max_coverage": 0.9524502754211426,
+      "final_coverage": 0.9524502754211426,
+      "max_iou": 0.9092172384262085,
+      "distance_at_max_mm": 2.403806196525693,
+      "angle_at_max_deg": 0.5577799081802368,
+      "steps": 139
+    },
+    {
+      "seed": 10200048,
+      "success": true,
+      "max_coverage": 0.9504690170288086,
+      "final_coverage": 0.9504690170288086,
+      "max_iou": 0.9056131839752197,
+      "distance_at_max_mm": 2.630611415952444,
+      "angle_at_max_deg": 0.17229962348937988,
+      "steps": 285
+    },
+    {
+      "seed": 10200049,
+      "success": true,
+      "max_coverage": 0.9516770839691162,
+      "final_coverage": 0.9516770839691162,
+      "max_iou": 0.9078090786933899,
+      "distance_at_max_mm": 0.728706712834537,
+      "angle_at_max_deg": 2.4130258560180664,
+      "steps": 422
+    }
+  ]
+}

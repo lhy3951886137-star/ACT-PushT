@@ -1,0 +1,9 @@
+{
+  "name": "vision_act_v2_kp",
+  "steps": 60000,
+  "best_step": 45000,
+  "best_validation_success": 0.82,
+  "best_validation_coverage": 0.9449333119392395,
+  "best_validation_l1": 0.11431362181901931,
+  "seconds": 8896.218000000008
+}

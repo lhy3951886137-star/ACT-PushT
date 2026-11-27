@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "name": "full_random_state_act_v4",
+  "steps": 50000,
+  "best_step": 30000,
+  "best_validation_success": 0.9,
+  "best_validation_coverage": 0.9194277657568455,
+  "best_validation_l1": 0.15151968985795974,
+  "seconds": 4029.625
+}

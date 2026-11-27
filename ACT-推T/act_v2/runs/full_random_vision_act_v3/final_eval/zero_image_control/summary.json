@@ -1,0 +1,277 @@
+{
+  "success_rate": 0.0,
+  "successes": 0,
+  "n": 20,
+  "success_ci95": [
+    -1.3877787807814457e-17,
+    0.16113012549493322
+  ],
+  "mean_max_coverage": 0.20238783250097186,
+  "mean_max_iou": 0.12028905996121467,
+  "mean_steps": 2400.0,
+  "mean_success_steps": null,
+  "angle_buckets": {
+    "0-45deg": {
+      "n": 3,
+      "successes": 0,
+      "sr": 0.0
+    },
+    "45-90deg": {
+      "n": 5,
+      "successes": 0,
+      "sr": 0.0
+    },
+    "90-135deg": {
+      "n": 5,
+      "successes": 0,
+      "sr": 0.0
+    },
+    "135-180deg": {
+      "n": 7,
+      "successes": 0,
+      "sr": 0.0
+    }
+  },
+  "episodes": [
+    {
+      "seed": 30100000,
+      "init_angle_deg": 120.35050964355469,
+      "init_dist_cm": 10.210748761892319,
+      "success": false,
+      "max_coverage": 0.0077976263128221035,
+      "final_coverage": 0.0077976263128221035,
+      "max_iou": 0.003914073575288057,
+      "distance_at_max_mm": 102.10758447647095,
+      "angle_at_max_deg": 120.35050964355469,
+      "steps": 2400
+    },
+    {
+      "seed": 30100001,
+      "init_angle_deg": 53.52704620361328,
+      "init_dist_cm": 4.8454467207193375,
+      "success": false,
+      "max_coverage": 0.28453752398490906,
+      "final_coverage": 0.28453540802001953,
+      "max_iou": 0.16586636006832123,
+      "distance_at_max_mm": 48.45456779003143,
+      "angle_at_max_deg": 53.52705001831055,
+      "steps": 2400
+    },
+    {
+      "seed": 30100002,
+      "init_angle_deg": -40.851173400878906,
+      "init_dist_cm": 9.651602804660797,
+      "success": false,
+      "max_coverage": 0.3068566918373108,
+      "final_coverage": 0.3068566918373108,
+      "max_iou": 0.1812349259853363,
+      "distance_at_max_mm": 96.51584178209305,
+      "angle_at_max_deg": 40.85116958618164,
+      "steps": 2400
+    },
+    {
+      "seed": 30100003,
+      "init_angle_deg": -24.211576461791992,
+      "init_dist_cm": 12.63853907585144,
+      "success": false,
+      "max_coverage": 0.10451021045446396,
+      "final_coverage": 0.10450863093137741,
+      "max_iou": 0.05513625591993332,
+      "distance_at_max_mm": 126.38558447360992,
+      "angle_at_max_deg": 24.211576461791992,
+      "steps": 2400
+    },
+    {
+      "seed": 30100004,
+      "init_angle_deg": 144.3634796142578,
+      "init_dist_cm": 7.330001145601273,
+      "success": false,
+      "max_coverage": 0.018171802163124084,
+      "final_coverage": 0.01817093789577484,
+      "max_iou": 0.009169211611151695,
+      "distance_at_max_mm": 73.3000710606575,
+      "angle_at_max_deg": 144.3634796142578,
+      "steps": 2400
+    },
+    {
+      "seed": 30100005,
+      "init_angle_deg": 150.08567810058594,
+      "init_dist_cm": 3.6193646490573883,
+      "success": false,
+      "max_coverage": 0.37599825859069824,
+      "final_coverage": 0.2317606508731842,
+      "max_iou": 0.23152577877044678,
+      "distance_at_max_mm": 36.19313985109329,
+      "angle_at_max_deg": 150.08567810058594,
+      "steps": 2400
+    },
+    {
+      "seed": 30100006,
+      "init_angle_deg": -93.61035919189453,
+      "init_dist_cm": 13.755130767822266,
+      "success": false,
+      "max_coverage": 0.0,
+      "final_coverage": 0.0,
+      "max_iou": 0.0,
+      "distance_at_max_mm": 137.5514268875122,
+      "angle_at_max_deg": 93.61035919189453,
+      "steps": 2400
+    },
+    {
+      "seed": 30100007,
+      "init_angle_deg": 159.2144317626953,
+      "init_dist_cm": 9.954096376895905,
+      "success": false,
+      "max_coverage": 0.3594749867916107,
+      "final_coverage": 0.3594737946987152,
+      "max_iou": 0.21912190318107605,
+      "distance_at_max_mm": 99.5408222079277,
+      "angle_at_max_deg": 159.2144317626953,
+      "steps": 2400
+    },
+    {
+      "seed": 30100008,
+      "init_angle_deg": -114.11407470703125,
+      "init_dist_cm": 5.495758727192879,
+      "success": false,
+      "max_coverage": 0.3292894661426544,
+      "final_coverage": 0.07243254035711288,
+      "max_iou": 0.19709546864032745,
+      "distance_at_max_mm": 69.03944909572601,
+      "angle_at_max_deg": 105.59021759033203,
+      "steps": 2400
+    },
+    {
+      "seed": 30100009,
+      "init_angle_deg": 141.27252197265625,
+      "init_dist_cm": 8.294055610895157,
+      "success": false,
+      "max_coverage": 0.008367392234504223,
+      "final_coverage": 0.008366622030735016,
+      "max_iou": 0.004201272968202829,
+      "distance_at_max_mm": 82.94060826301575,
+      "angle_at_max_deg": 141.27252197265625,
+      "steps": 2400
+    },
+    {
+      "seed": 30100010,
+      "init_angle_deg": -50.72299575805664,
+      "init_dist_cm": 10.645664483308792,
+      "success": false,
+      "max_coverage": 0.097467802464962,
+      "final_coverage": 0.097467802464962,
+      "max_iou": 0.05123056471347809,
+      "distance_at_max_mm": 106.45604133605957,
+      "angle_at_max_deg": 50.722999572753906,
+      "steps": 2400
+    },
+    {
+      "seed": 30100011,
+      "init_angle_deg": 101.1635513305664,
+      "init_dist_cm": 3.3179987221956253,
+      "success": false,
+      "max_coverage": 0.43195080757141113,
+      "final_coverage": 0.4319484531879425,
+      "max_iou": 0.27547019720077515,
+      "distance_at_max_mm": 33.17985311150551,
+      "angle_at_max_deg": 101.1635513305664,
+      "steps": 2400
+    },
+    {
+      "seed": 30100012,
+      "init_angle_deg": -74.90084075927734,
+      "init_dist_cm": 5.434126406908035,
+      "success": false,
+      "max_coverage": 0.16539691388607025,
+      "final_coverage": 0.142861470580101,
+      "max_iou": 0.09015405923128128,
+      "distance_at_max_mm": 54.341353476047516,
+      "angle_at_max_deg": 74.90084075927734,
+      "steps": 2400
+    },
+    {
+      "seed": 30100013,
+      "init_angle_deg": -150.4561004638672,
+      "init_dist_cm": 1.1903172358870506,
+      "success": false,
+      "max_coverage": 0.4243726134300232,
+      "final_coverage": 0.4243726134300232,
+      "max_iou": 0.26933565735816956,
+      "distance_at_max_mm": 7.708106189966202,
+      "angle_at_max_deg": 142.78269958496094,
+      "steps": 2400
+    },
+    {
+      "seed": 30100014,
+      "init_angle_deg": -17.03367042541504,
+      "init_dist_cm": 10.462019592523575,
+      "success": false,
+      "max_coverage": 0.09204075485467911,
+      "final_coverage": 0.09204075485467911,
+      "max_iou": 0.04824041947722435,
+      "distance_at_max_mm": 104.6203076839447,
+      "angle_at_max_deg": 17.03367042541504,
+      "steps": 2400
+    },
+    {
+      "seed": 30100015,
+      "init_angle_deg": -65.91094207763672,
+      "init_dist_cm": 7.1473367512226105,
+      "success": false,
+      "max_coverage": 0.06858180463314056,
+      "final_coverage": 0.0,
+      "max_iou": 0.035508520901203156,
+      "distance_at_max_mm": 71.47354632616043,
+      "angle_at_max_deg": 65.91094207763672,
+      "steps": 2400
+    },
+    {
+      "seed": 30100016,
+      "init_angle_deg": -153.47743225097656,
+      "init_dist_cm": 10.180861502885818,
+      "success": false,
+      "max_coverage": 0.38109439611434937,
+      "final_coverage": 0.38109439611434937,
+      "max_iou": 0.23540247976779938,
+      "distance_at_max_mm": 101.80802643299103,
+      "angle_at_max_deg": 153.47743225097656,
+      "steps": 2400
+    },
+    {
+      "seed": 30100017,
+      "init_angle_deg": -100.29410552978516,
+      "init_dist_cm": 5.6021831929683685,
+      "success": false,
+      "max_coverage": 0.14377304911613464,
+      "final_coverage": 0.14119888842105865,
+      "max_iou": 0.07745445519685745,
+      "distance_at_max_mm": 56.021880358457565,
+      "angle_at_max_deg": 100.29410552978516,
+      "steps": 2400
+    },
+    {
+      "seed": 30100018,
+      "init_angle_deg": 139.85105895996094,
+      "init_dist_cm": 4.910558462142944,
+      "success": false,
+      "max_coverage": 0.15488457679748535,
+      "final_coverage": 0.15488341450691223,
+      "max_iou": 0.08394303172826767,
+      "distance_at_max_mm": 49.10556599497795,
+      "angle_at_max_deg": 139.85105895996094,
+      "steps": 2400
+    },
+    {
+      "seed": 30100019,
+      "init_angle_deg": 62.56795883178711,
+      "init_dist_cm": 3.7525929510593414,
+      "success": false,
+      "max_coverage": 0.29318997263908386,
+      "final_coverage": 0.293189138174057,
+      "max_iou": 0.17177656292915344,
+      "distance_at_max_mm": 37.52603754401207,
+      "angle_at_max_deg": 62.56796646118164,
+      "steps": 2400
+    }
+  ]
+}

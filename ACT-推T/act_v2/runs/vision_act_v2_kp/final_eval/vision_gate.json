@@ -1,0 +1,50 @@
+{
+  "passed": false,
+  "required": 0.85,
+  "checkpoint": "act_v2\\runs\\vision_act_v2_kp\\best.pt",
+  "sha256": "6e4486a2d0f9669d59892547b2f08b13242b16f804c34a67117fd42086b4bd52",
+  "n_action_steps": 8,
+  "dev_best": {
+    "n_action_steps": 8,
+    "success_rate": 0.84,
+    "successes": 42,
+    "n": 50,
+    "success_ci95": [
+      0.7148551903823401,
+      0.9166267863791231
+    ],
+    "mean_max_coverage": 0.9457122814655304,
+    "mean_max_iou": 0.8975953865051269,
+    "mean_steps": 774.86,
+    "failed_mean_distance_mm": 3.8816870328446385,
+    "failed_mean_angle_deg": 2.243705078959465
+  },
+  "confirmation": {
+    "success_rate": 0.9,
+    "successes": 45,
+    "n": 50,
+    "success_ci95": [
+      0.7863950966521162,
+      0.956524876008429
+    ],
+    "mean_max_coverage": 0.949750792980194,
+    "mean_max_iou": 0.9044320487976074,
+    "mean_steps": 700.48,
+    "failed_mean_distance_mm": 3.070408117491752,
+    "failed_mean_angle_deg": 2.0491981148719787
+  },
+  "zero_image_control": {
+    "success_rate": 0.0,
+    "successes": 0,
+    "n": 20,
+    "success_ci95": [
+      -1.3877787807814457e-17,
+      0.16113012549493322
+    ],
+    "mean_max_coverage": 0.33412841260433196,
+    "mean_max_iou": 0.2023123424500227,
+    "mean_steps": 330.9,
+    "failed_mean_distance_mm": 62.02913597226143,
+    "failed_mean_angle_deg": 7.385085543990135
+  }
+}
