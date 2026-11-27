@@ -7,3 +7,8 @@
 **/*.tar.zst
 **/.asset-cache/
 **/reproduced/
+ACT-推T/act_v2/full_random_data*/
+ACT-推T/act_v2/full_random_dagger*/
+ACT-推T/act_v2/full_random_rgb*/
+ACT-推T/round4/precision_data/
+ACT-推T/stage2/

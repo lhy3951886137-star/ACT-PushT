@@ -44,6 +44,9 @@ python download_assets.py --preset train-small-state
 
 # 下载前列出体积与文件，不访问网络
 python download_assets.py --preset all --list
+
+# 完成恢复后，离线校验每个原始文件的SHA256（完整数据校验需要读取约140GB）
+python download_assets.py --preset all --verify-local
 ```
 
 大文件均以原始 `.pt` 或无损 `.tar.zst` 分卷保存在 [act-pusht-v1 Release](https://github.com/lhy3951886137-star/ACT-PushT/releases/tag/act-pusht-v1)。每个数据分卷可独立解压。脚本校验每个附件的 SHA256、解包路径和文件大小后恢复原相对路径。完整数据解压约140GB，另需缓存空间；`--keep-cache` 可保留压缩附件，默认成功解包后移除本次下载的压缩缓存。无需下载训练图像即可运行冻结模型评测。
@@ -93,4 +96,4 @@ ACT-推T/
   assets-manifest.json    每个权重/数据分卷的大小、路径和SHA256
 ```
 
-下载后权重回到 `act_v2/runs/<模型>/best.pt` 或 `latest.pt`。只对分发副本中的 `act_v2/data.py` 做了路径可迁移修正，兼容数据清单中原 Windows 绝对路径；原始训练目录未改动，权重和数据内容未改动。没有额外添加开源许可。
+下载后权重回到 `act_v2/runs/<模型>/best.pt` 或 `latest.pt`。本次归档的实际验证结果见 [VALIDATION.md](VALIDATION.md)。只对分发副本中的 `act_v2/data.py` 做了路径可迁移修正，兼容数据清单中原 Windows 绝对路径；原始训练目录未改动，权重和数据内容未改动。没有额外添加开源许可。

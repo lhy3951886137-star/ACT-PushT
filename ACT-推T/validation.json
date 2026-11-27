@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-27",
+  "timezone": "Asia/Shanghai",
+  "scope": "Distribution packaging and one-scene closed-loop smoke checks; not a rerun of historical full benchmarks",
+  "archive_roundtrip": {
+    "archives": 30,
+    "files": 5571,
+    "bytes": 139371578887,
+    "seconds": 264.8,
+    "all_bytes_match": true
+  },
+  "closed_loop_smokes": {
+    "full-vision": {
+      "seed": 30200000,
+      "successes": 1,
+      "n": 1,
+      "mean_steps": 1010.0,
+      "mean_max_coverage": 0.9566176533699036
+    },
+    "full-state": {
+      "seed": 30200000,
+      "successes": 1,
+      "n": 1,
+      "mean_steps": 986.0,
+      "mean_max_coverage": 0.9559407830238342
+    },
+    "small-state": {
+      "seed": 9200000,
+      "successes": 1,
+      "n": 1,
+      "mean_steps": 146.0,
+      "mean_max_coverage": 0.9552825093269348
+    },
+    "small-vision": {
+      "seed": 10200000,
+      "successes": 1,
+      "n": 1,
+      "mean_steps": 796.0,
+      "mean_max_coverage": 0.9548478722572327
+    }
+  },
+  "precision_dataset_relocated": {
+    "train": 128,
+    "validation": 22,
+    "original_file_hashes_verified": 306
+  },
+  "training_entrypoints": "All four --dry-run commands generated successfully",
+  "syntax": "All distribution Python and JSON files parsed successfully"
+}

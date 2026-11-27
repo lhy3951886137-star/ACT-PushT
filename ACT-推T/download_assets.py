@@ -9,6 +9,7 @@ import shutil
 import subprocess
 import tarfile
 import time
+import urllib.parse
 import urllib.request
 
 ROOT=Path(__file__).resolve().parent
@@ -54,7 +55,8 @@ def select(manifest,preset):
     cards=json.loads((ROOT/'models.json').read_text(encoding='utf-8'))
     card=cards[model]
     categories=set(card['data_categories'])
-    return [a for a in items if a['category'] in categories or (a.get('path')==card['checkpoint']) or a.get('path')==card.get('training_overrides',{}).get('init_from')]
+    warmstart=card.get('training_overrides',{}).get('init_from')
+    return [a for a in items if a['category'] in categories or (a.get('path')==card['checkpoint']) or (warmstart is not None and a.get('path')==warmstart)]
 
 
 def unpack(path,asset):
@@ -75,12 +77,26 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--preset',choices=['primary','weights','all','train-full-vision','train-full-state','train-small-vision','train-small-state'],default='primary')
     p.add_argument('--list',action='store_true'); p.add_argument('--keep-cache',action='store_true')
+    p.add_argument('--verify-local',action='store_true',help='Verify restored files against archived byte-for-byte source hashes, without network access')
     p.add_argument('--asset-dir',type=Path,help='Use previously downloaded local assets, without network access')
     args=p.parse_args(); manifest=json.loads((ROOT/'assets-manifest.json').read_text(encoding='utf-8'))
     assets=select(manifest,args.preset)
     for a in assets: print(f"{a['name']}  {a['size']/1e6:.1f} MB  [{a['category']}]")
     print(f'Total: {len(assets)} assets, {sum(a["size"] for a in assets)/1e9:.3f} GB')
     if args.list: return
+    if args.verify_local:
+        hashes=json.loads((ROOT/'dataset-file-checksums.json').read_text(encoding='utf-8'))
+        files={}
+        for a in assets:
+            if a['kind']=='file': files[a['path']]={'sha256':a['sha256'],'size':a['size']}
+            else:
+                for item in hashes[a['name']]: files[item['path']]=item
+        for path,item in files.items():
+            target=ROOT/path
+            if not target.exists() or target.stat().st_size!=item['size'] or sha(target)!=item['sha256']:
+                raise SystemExit('Missing or altered local file: '+path)
+        print(f'All {len(files)} restored files match their original SHA256 hashes.')
+        return
     cache=ROOT/'.asset-cache'; cache.mkdir(exist_ok=True)
     completed_path=cache/'extracted.json'
     completed=json.loads(completed_path.read_text()) if completed_path.exists() else {}
