@@ -6,7 +6,7 @@
 
 | 模型目录 | 使用场景与策略输入 | 算法与执行参数 | 历史评测结果 |
 |---|---|---|---|
-| [全随机 Vision-ACT v3](act_v2/runs/full_random_vision_act_v3/README.md) | 全随机初始位置 + 全 360° 角度；双相机 RGB + 机器人 XY；推理不读取 T 块或目标真值 | 双路 ResNet18 + 多尺度 SpatialSoftmax 关键点 + DETR-ACT；训练期 SE(2) 辅助监督；3 帧历史 / 24 步预测；非周期 `[14,18,16,20]` + 冻结唤醒 | Dev 92%；独立盲测 92/100；图像置零 0/20；盲测成功平均 1195.6 步 |
+| [全随机 Vision-ACT v3](act_v2/runs/full_random_vision_act_v3/README.md) | 全随机初始位置 + 全 360° 角度；双相机 RGB + 机器人 XY；推理不读取 T 块或目标真值 | 双路 ResNet18 + 多尺度 SpatialSoftmax 关键点 + DETR-ACT；训练期 SE(2) 辅助监督；3 帧历史 / 24 步预测；非周期 `[14,18,16,20]` + 冻结唤醒 | Dev 92%；独立盲测 92/100；图像置零 0/20；含Dev的150场景成功平均 1195.6 步 |
 | [全随机 State-ACT v4](act_v2/runs/full_random_state_act_v4/README.md) | 全随机初始位置 + 全 360° 角度；适合仿真或可可靠获得机器人、物体和目标状态的场景 | full28 连续 SE(2) 几何特征 + DETR-ACT；3 帧历史 / 24 步预测；非周期 `[12,16,18,14]` + 冻结唤醒 | Dev 48/50；三组独立测试 47/50、90/100、91/100；含 Dev 的 300 场景总计 276/300（92%） |
 | [小范围 State-ACT](act_v2/runs/state_act_v2_150/README.md) | 小范围平移、接近目标角度的高精度 Push-T；可获得完整状态 | legacy16 几何特征 + DETR-ACT；2 帧历史 / 16 步预测；每次执行 8 步 | Dev 49/50（98%）；独立盲测 50/50（100%） |
 | [小范围 Vision-ACT](act_v2/runs/vision_act_v2_kp/README.md) | 小范围高精度 Push-T；双相机 RGB + 机器人 XY | 双路 ResNet18 + 多尺度 SpatialSoftmax 关键点 + DETR-ACT；2 帧历史 / 16 步预测；每次执行 8 步 | Dev 42/50（84%）；独立盲测 45/50（90%）；图像置零 0/20 |

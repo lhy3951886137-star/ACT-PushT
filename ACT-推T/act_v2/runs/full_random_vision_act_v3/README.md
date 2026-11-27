@@ -4,7 +4,7 @@
 
 **使用算法：** ACT: dual from-scratch GroupNorm ResNet18 + multi-scale SpatialSoftmax keypoints + Pre-LN DETR; training-only SE(2) auxiliary geometry; aperiodic chunking with MC-dropout freeze wake。此检查点 `use_vae=false`，全部动作来自单个ACT模型的动作块。
 
-**历史结果：** Dev 46/50=92%；盲测1 46/50=92%；盲测2 46/50=92%；盲测合并92/100；图像置零0/20；盲测成功平均1195.6步。
+**历史结果：** Dev 46/50=92%；盲测1 46/50=92%；盲测2 46/50=92%；盲测合并92/100；图像置零0/20；含Dev的150场景成功平均1195.6步。
 
 ## 权重与配置
 

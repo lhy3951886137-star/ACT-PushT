@@ -49,5 +49,11 @@
   "raw_rgb_uploaded": false,
   "uploaded_archive_count": 7,
   "uploaded_archive_files": 4449,
-  "uploaded_archive_bytes": 90690823
+  "uploaded_archive_bytes": 90690823,
+  "private_release_download": {
+    "authentication": "passed",
+    "sha256": "passed",
+    "safe_unpack": "passed",
+    "files": 50
+  }
 }
