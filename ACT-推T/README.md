@@ -27,7 +27,7 @@ Linux 可改用 `.venv/bin/python`；离屏渲染需要可用的 MuJoCo OpenGL �
 
 ## 下载权重与数据
 
-仓库为私有仓库，下载时需要已登录且拥有读取权限的 GitHub 账号。脚本优先使用 `GH_TOKEN` / `GITHUB_TOKEN`，其次使用 `gh auth token` 或 Git Credential Manager 中已有的 GitHub 凭据；凭据不写入本仓库。
+仓库与Release附件均已公开，可以直接下载，无需登录。脚本默认匿名访问；如遇GitHub API频率限制，可选使用 `GH_TOKEN` / `GITHUB_TOKEN`、`gh auth token` 或 Git Credential Manager 中已有的 GitHub 凭据；凭据不写入本仓库。
 
 ```powershell
 # 仅下载四个指定模型（约1.75GB），可以直接开始闭环评测
@@ -94,7 +94,7 @@ ACT-推T/
   assets/                推杆和T块 MuJoCo XML
   precision_env.py        小范围高精度物理环境
   vision_env.py           双相机配置
-  download_assets.py      私有Release下载、SHA256校验与安全解压
+  download_assets.py      公开附件匿名下载、SHA256校验与安全解压
   reproduce.py            四个模型的统一训练与评测入口
   models.json            场景、算法、种子、执行参数、主要权重哈希
   assets-manifest.json    每个权重/数据分卷的大小、路径和SHA256

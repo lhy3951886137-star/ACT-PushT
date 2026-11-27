@@ -9,7 +9,7 @@
 ## 权重与配置
 
 - 指定冻结权重：`best.pt`；SHA256：`db5b307eec1b7c194a6ec35f65a3d7292ac6d8d7ac6fa40d78d6bc78b1654fc2`。
-- [原始权重下载](https://github.com/lhy3951886137-star/ACT-PushT/releases/download/act-pusht-v1/state_act_v2_150--best.pt)（私有附件，需要账号读取权限）。
+- [原始权重下载](https://github.com/lhy3951886137-star/ACT-PushT/releases/download/act-pusht-v1/state_act_v2_150--best.pt)（公开附件，可直接下载）。
 - [原训练配置](config.json)、[归一化统计](stats.json)、[推理执行参数](inference-settings.json)、[原始主评测报告](final_eval/state_gate.json)。
 - 本次上传也保留该运行的其他best/latest权重与实验检查点，见根目录附件清单；推荐结果仅对应上述指定权重与执行参数。
 

@@ -1,4 +1,4 @@
-"""Download private GitHub Release assets, verify SHA256, and restore original paths."""
+"""Download GitHub Release assets anonymously when public, verify SHA256, and restore paths."""
 from __future__ import annotations
 import argparse
 import hashlib
@@ -9,6 +9,7 @@ import shutil
 import subprocess
 import tarfile
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -35,7 +36,7 @@ def get_token():
         values=dict(s.split('=',1) for s in r.stdout.splitlines() if '=' in s)
         if values.get('password'): return values['password']
     except FileNotFoundError: pass
-    raise SystemExit('Private repository authentication required. Sign in with gh auth login, or provide GH_TOKEN / GITHUB_TOKEN with repository read access.')
+    raise SystemExit('GitHub authentication required for a private repository or API rate limits. Sign in with gh auth login, or provide GH_TOKEN / GITHUB_TOKEN.')
 
 
 class SafeRedirect(urllib.request.HTTPRedirectHandler):
@@ -44,6 +45,29 @@ class SafeRedirect(urllib.request.HTTPRedirectHandler):
         if result and urllib.parse.urlsplit(newurl).hostname!=urllib.parse.urlsplit(request.full_url).hostname:
             result.remove_header('Authorization')
         return result
+
+
+def fetch_release(opener,manifest):
+    url=f"https://api.github.com/repos/{manifest['repository']}/releases/tags/{manifest['tag']}"
+    headers={'Accept':'application/vnd.github+json','User-Agent':'ACT-PushT-reproduction'}
+    token=None
+    try:
+        with opener.open(urllib.request.Request(url,headers=headers),timeout=90) as response:
+            return json.load(response),token
+    except urllib.error.HTTPError as exc:
+        if exc.code not in (401,403,404): raise
+    token=get_token()
+    headers['Authorization']='Bearer '+token
+    with opener.open(urllib.request.Request(url,headers=headers),timeout=90) as response:
+        return json.load(response),token
+
+
+def asset_request(asset,token):
+    headers={'Accept':'application/octet-stream','User-Agent':'ACT-PushT-reproduction'}
+    if token is None:
+        return urllib.request.Request(asset['browser_download_url'],headers=headers)
+    headers['Authorization']='Bearer '+token
+    return urllib.request.Request(asset['url']+'?download=1',headers=headers)
 
 
 def select(manifest,preset):
@@ -112,10 +136,8 @@ def main():
         local=(args.asset_dir/a['name']) if args.asset_dir else cache/a['name']
         if not local.exists() or local.stat().st_size!=a['size'] or sha(local)!=a['sha256']:
             if args.asset_dir: raise SystemExit('Missing/corrupt local asset: '+str(local))
-            if token is None:
-                token=get_token()
-                request=urllib.request.Request(f"https://api.github.com/repos/{manifest['repository']}/releases/tags/{manifest['tag']}",headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','User-Agent':'ACT-PushT-reproduction'})
-                with opener.open(request,timeout=90) as response: release=json.load(response)
+            if not remote:
+                release,token=fetch_release(opener,manifest)
                 remote={item['name']:item for item in release['assets']}
             asset=remote.get(a['name'])
             if not asset: raise SystemExit('Release asset missing: '+a['name'])
@@ -123,7 +145,7 @@ def main():
             last_error=None
             for attempt in range(3):
                 try:
-                    request=urllib.request.Request(asset['url']+'?download=1',headers={'Authorization':'Bearer '+token,'Accept':'application/octet-stream','User-Agent':'ACT-PushT-reproduction'})
+                    request=asset_request(asset,token)
                     with opener.open(request,timeout=180) as response,tmp.open('wb') as target:
                         shutil.copyfileobj(response,target,length=4*1024*1024)
                     if tmp.stat().st_size!=a['size'] or sha(tmp)!=a['sha256']: raise RuntimeError('Downloaded checksum/size mismatch: '+a['name'])
