@@ -21,7 +21,7 @@
 python download_assets.py --preset primary
 python reproduce.py eval full-vision --split blind
 
-# 先下载对应训练数据，再使用新名称重新训练
+# 下载已上传元数据/热启动后，需从本地补齐原始RGB图像，再使用新名称重新训练
 python download_assets.py --preset train-full-vision
 python reproduce.py train full-vision --dry-run
 python reproduce.py train full-vision
@@ -56,3 +56,5 @@ env.move(action)
 ```
 
 模型加载、前向推理与评测需要CUDA。完整安装、相机/物理环境和数据说明见 [总说明](../../../README.md)。
+
+原始RGB训练图像按用户要求保留本地，不随GitHub附件提供。直接运行冻结模型不需要这些训练图像。

@@ -45,8 +45,8 @@
       "r3_boost": 2.0
     },
     "data_categories": [
-      "full-rgb",
-      "full-vis-dagger"
+      "full-state",
+      "vision-metadata"
     ],
     "report": "final_eval_ap14181620/final_vision_ap_gate.json",
     "result": "Dev 46/50=92%；盲测1 46/50=92%；盲测2 46/50=92%；盲测合并92/100；图像置零0/20；盲测成功平均1195.6步。",
@@ -157,8 +157,7 @@
     "training_module": "act_v2.train_vision",
     "training_overrides": {},
     "data_categories": [
-      "precision-state",
-      "precision-rgb"
+      "precision-state"
     ],
     "report": "final_eval/vision_gate.json",
     "result": "Dev 42/50=84%；独立盲测45/50=90%；图像置零0/20。原始gate要求Dev和盲测均≥85%，因此passed=false，原报告保持原样。",

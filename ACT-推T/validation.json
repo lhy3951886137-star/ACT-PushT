@@ -45,5 +45,9 @@
     "original_file_hashes_verified": 306
   },
   "training_entrypoints": "All four --dry-run commands generated successfully",
-  "syntax": "All distribution Python and JSON files parsed successfully"
+  "syntax": "All distribution Python and JSON files parsed successfully",
+  "raw_rgb_uploaded": false,
+  "uploaded_archive_count": 7,
+  "uploaded_archive_files": 4449,
+  "uploaded_archive_bytes": 90690823
 }

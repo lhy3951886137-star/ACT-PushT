@@ -33,10 +33,10 @@ Linux 可改用 `.venv/bin/python`；离屏渲染需要可用的 MuJoCo OpenGL �
 # 仅下载四个指定模型（约1.75GB），可以直接开始闭环评测
 python download_assets.py --preset primary
 
-# 完整归档：所有 best/latest、两个 soup 实验检查点、训练热启动、完整数据与评测轨迹
+# 本次上传的全部材料：所有 best/latest、两个 soup 实验检查点、训练热启动、状态/视觉元数据与评测轨迹
 python download_assets.py --preset all
 
-# 按模型下载训练所需数据和热启动
+# 按模型下载已上传的训练元数据和热启动；视觉模型另需本地原始RGB
 python download_assets.py --preset train-full-vision
 python download_assets.py --preset train-full-state
 python download_assets.py --preset train-small-vision
@@ -45,11 +45,13 @@ python download_assets.py --preset train-small-state
 # 下载前列出体积与文件，不访问网络
 python download_assets.py --preset all --list
 
-# 完成恢复后，离线校验每个原始文件的SHA256（完整数据校验需要读取约140GB）
+# 完成恢复后，离线校验已上传文件的SHA256
 python download_assets.py --preset all --verify-local
 ```
 
-大文件均以原始 `.pt` 或无损 `.tar.zst` 分卷保存在 [act-pusht-v1 Release](https://github.com/lhy3951886137-star/ACT-PushT/releases/tag/act-pusht-v1)。每个数据分卷可独立解压。脚本校验每个附件的 SHA256、解包路径和文件大小后恢复原相对路径。完整数据解压约140GB，另需缓存空间；`--keep-cache` 可保留压缩附件，默认成功解包后移除本次下载的压缩缓存。无需下载训练图像即可运行冻结模型评测。
+大文件均以原始 `.pt` 或无损 `.tar.zst` 保存在 [act-pusht-v1 Release](https://github.com/lhy3951886137-star/ACT-PushT/releases/tag/act-pusht-v1)。本次共13个检查点、7个数据/轨迹附件，约5.24GB。脚本校验每个附件的 SHA256、解包路径和文件大小后恢复原相对路径。`--keep-cache` 可保留压缩附件，默认成功解包后移除本次下载的压缩缓存。
+
+**按用户最终选择，原始 RGB 训练图像不上传 GitHub，仍保留在本地原训练目录。** 上传材料包含状态轨迹、训练/验证划分、视觉动作/辅助状态元数据、原相机配置和采集/重放代码。四个冻结模型均可直接运行和评测，无需原始训练图像；重新训练视觉模型时需要另行提供这些原始 RGB 数组。
 
 ## 评测与推理
 
@@ -72,14 +74,16 @@ python reproduce.py eval full-vision --split blind --count 1
 
 ```powershell
 python reproduce.py train small-state
-python reproduce.py train small-vision
 python reproduce.py train full-state
+
+# 以下视觉训练命令需要先从本地补齐RGB训练图像
+python reproduce.py train small-vision
 python reproduce.py train full-vision
 ```
 
 命令读取原 `config.json`，使用新运行名称（`*_retrain`）训练，避免原目录的 `complete.json` 使训练提前返回。全随机 State v4 从随附 v3 的 `latest.pt` 热启动；全随机 Vision v3 从随附 v2 的 `best.pt` 热启动，并补入原 README 记录的角度均衡、轨迹速度加权和 Vision-DAgger 采样参数。可用 `--dry-run` 查看完整命令。原始配置未保存每个采样器选项、硬件非确定性也未完全消除，因此重新训练不承诺逐位相同；原冻结检查点原样保留，可直接复现其推理和评测。
 
-数据分区、轨迹、RGB、元数据及必要热启动均已归档，无需重新采集。另保留采集与 RGB 重放源码作为参考。历史开发过程与旧命令见 [README-original.md](act_v2/README-original.md)，其中的历史路径和其他模型不属于本次四个推荐入口；以本页和 `reproduce.py` 为准。
+状态模型重新训练所需数据已上传。视觉模型重新训练前，将本地 `stage2/data/*_rgb.npy`、`act_v2/full_random_rgb/*_rgb.npy`、`act_v2/full_random_rgb_all/*_rgb.npy` 和 `act_v2/full_random_rgb_vis_dagger/*_rgb.npy` 按原相对路径补入本目录；各目录中的清单与元数据随附件提供。保留采集与 RGB 重放源码作为参考。历史开发过程与旧命令见 [README-original.md](act_v2/README-original.md)，其中的历史路径和其他模型不属于本次四个推荐入口；以本页和 `reproduce.py` 为准。
 
 ## 文件布局与校验
 

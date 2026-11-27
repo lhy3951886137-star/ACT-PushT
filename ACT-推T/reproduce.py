@@ -23,6 +23,20 @@ def train(key, card, name, dry):
                 flags[flag[2:].replace('-','_')]=(flag,{kw.arg:ast.literal_eval(kw.value) for kw in n.keywords if kw.arg=='action'})
     cfg=json.loads((ROOT/card['config']).read_text(encoding='utf-8'))
     cfg.update(card.get('training_overrides',{})); cfg['name']=name or cfg['name']+'_retrain'
+    if not dry and 'vision' in key:
+        missing=[]
+        if key=='small-vision':
+            mp=ROOT/'stage2/data/complete.json'
+            if not mp.exists(): raise SystemExit('Download metadata first: python download_assets.py --preset train-small-vision')
+            rows=json.loads(mp.read_text(encoding='utf-8'))['episodes']
+            missing=[ROOT/'stage2/data'/row['rgb'] for row in rows if not (ROOT/'stage2/data'/row['rgb']).exists()]
+        else:
+            for folder in ['full_random_rgb_all','full_random_rgb_vis_dagger']:
+                mp=ROOT/'act_v2'/folder/'complete.json'
+                if not mp.exists(): raise SystemExit('Download metadata first: python download_assets.py --preset train-full-vision')
+                rows=json.loads(mp.read_text(encoding='utf-8'))['episodes']
+                missing.extend(ROOT/'act_v2'/row['rgb_rel'] for row in rows if not (ROOT/'act_v2'/row['rgb_rel']).exists())
+        if missing: raise SystemExit(f'Original RGB training arrays were kept locally by request. Restore {len(missing)} missing RGB files at their original relative paths before visual retraining. Example: {missing[0]}')
     if (ROOT/'act_v2/runs'/cfg['name']).exists():
         raise SystemExit('Training destination already exists; choose a fresh --name: '+cfg['name'])
     args=[sys.executable,'-m',module]
